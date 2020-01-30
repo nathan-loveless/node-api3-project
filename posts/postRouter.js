@@ -3,13 +3,13 @@ const db = require('../users/userDb.js');
 const router = express.Router();
 
 
-// router.get('/', (req, res) => {
-//   db.get()
-//     .then(user =>{
-//       res.status(200).json(user);    
-//     })
-//     .catch(err => res.status.json(err));
-// });
+router.get('/', (req, res) => {
+  db.get()
+    .then(user =>{
+      res.status(200).json(user);    
+    })
+    .catch(err => res.status.json(err));
+});
 
 // router.get('/:id', validateUserId, (req, res) => {
 //   res.status(200).json(req.user);
@@ -57,9 +57,9 @@ router.delete('/:id', (req, res) => {
 
 // custom middleware
 
-function validatePostId(req, res, next) {
+//function validatePostId(req, res, next) {
   // do your magic!
-}
+//}
 
 // function validateUserId(req, res, next) {
 //   const {id} = req.params;
